@@ -1,8 +1,15 @@
 # Nomarl
 *.class
-.idea/
 target/
+.classpath
+
+# Idea
 *.iml
+.idea/
+.project
+.settings/
+
+# Log
 *.zip
 *.log
 

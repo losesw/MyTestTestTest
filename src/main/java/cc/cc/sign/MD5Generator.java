@@ -57,6 +57,8 @@ public class MD5Generator {
 
             String temp = "  |  ";
             String temp2 = "  |  ";
+            String temp3 = "  |  ";
+            String temp4 = "  |  ";
 
             str[k++] = hexDigits[byte0 >>> 4 & 0xf];
             temp += new String(str, k -1, 1);
@@ -64,8 +66,10 @@ public class MD5Generator {
             temp += new String(str, k -1, 1);
 
             temp2 += Integer.toHexString(byte0);
+            temp3 += Integer.toHexString(byte0 & 0xff);
+            temp4 += Byte.toUnsignedInt(byte0);
 
-            System.out.println(temp + temp2);
+            System.out.println(temp + temp2 + temp3 + temp4);
 
         }
         return new String(str);
@@ -81,5 +85,7 @@ public class MD5Generator {
 
         String md5Data2 = md.md5Data2(text);
         System.out.println(md5Data2);
+
+
     }
 }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <meta charset="UTF-8" />
+    <title>Image Show</title>
+	<script src="./jquery-1.12.4.min.js"></script>
+    <script text="text/javascript">
+		$(function () {
+			$.ajax({
+				type: "GET",
+				url: "http://127.0.0.1:16250/redis/img",
+				dataType: "json",
+				async: "false",
+				data: {
+					"page": 0
+				},
+				success: function (data) {
+					if (data != null) {
+						for (var i in data.content) {
+							var img_url = data.content[i];					
+							var a = '<img src="' + img_url + '" height="350px" width="500px" />';
+							var b = '<div"><a href="' + img_url + '" target="_blank" class="view_img_link">' + a + '</a></div><br/><br/><br/>';
+							$("#content").append(b);			
+						}
+					}
+
+				},
+				error: function (data) {
+					alert(data);
+				}
+			})
+		});
+	</script>
+  </head>
+  
+  <body>
+    <div class="zong">
+      <div class="content" id="content" style="text-align: center;">
+	  
+      </div>
+    </div>
+  </body>
+</html>

@@ -48,7 +48,7 @@
 
         <encoder>
             <pattern>%d{HH:mm:ss.SSS}[%-5level][%thread]%logger{36} - %msg%n</pattern>
-            <!-- <pattern>%d{HH:mm:ss.SSS}[%-5level][%thread] - %msg%n</pattern> -->
+            <!-- <regex>%d{HH:mm:ss.SSS}[%-5level][%thread] - %msg%n</regex> -->
         </encoder>
     </appender>
 

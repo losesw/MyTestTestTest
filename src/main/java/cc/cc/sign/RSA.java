@@ -21,26 +21,26 @@ import org.apache.commons.codec.binary.Base64;
 public class RSA {
 
     public static void main(String[] args) {
-        try {
-            String publicPath = "D:\\BaiduYunDownload\\新浪开发文档-收银台\\sina资金账户管理服务开发文档\\资金账户管理对接相关技术文档" +
-                    "\\新浪资金账户管理服务1.4.7PHPdemo20160707\\safe_mode\\Cashier_mode\\sftp\\key\\rsa_sign_public.pem";
-            String privatePath = "D:\\BaiduYunDownload\\新浪开发文档-收银台\\sina资金账户管理服务开发文档\\资金账户管理对接相关技术文档" +
-                    "\\新浪资金账户管理服务1.4.7PHPdemo20160707\\safe_mode\\Cashier_mode\\sftp\\key\\rsa_sign_private.pem";
-//            System.out.println(getPemPublicKey(publicPath, "RSA").toString());
-//            System.out.println("----------");
+//        try {
+//            String publicPath = "D:\\BaiduYunDownload\\新浪开发文档-收银台\\sina资金账户管理服务开发文档\\资金账户管理对接相关技术文档" +
+//                    "\\新浪资金账户管理服务1.4.7PHPdemo20160707\\safe_mode\\Cashier_mode\\sftp\\key\\rsa_sign_public.pem";
+//            String privatePath = "D:\\BaiduYunDownload\\新浪开发文档-收银台\\sina资金账户管理服务开发文档\\资金账户管理对接相关技术文档" +
+//                    "\\新浪资金账户管理服务1.4.7PHPdemo20160707\\safe_mode\\Cashier_mode\\sftp\\key\\rsa_sign_private.pem";
+////            System.out.println(getPemPublicKey(publicPath, "RSA").toString());
+////            System.out.println("----------");
+////            System.out.println(getPemPrivateKey(privatePath, "RSA").toString());
+////            System.out.println("----------");
+//
+////            publicPath = "D:\\work\\资料\\密钥\\rsa_sina_sign_public.pem";
+////            System.out.println(getPemPublicKey(publicPath, "RSA").toString());
+////            System.out.println("----------");
+////            privatePath = "D:\\work\\资料\\密钥\\rsa_qed_sign_private.pem";
+//            privatePath = "D:\\work\\资料\\密钥\\rsa_qed_sign_private_8.pem";
 //            System.out.println(getPemPrivateKey(privatePath, "RSA").toString());
-//            System.out.println("----------");
-
-//            publicPath = "D:\\work\\资料\\密钥\\rsa_sina_sign_public.pem";
-//            System.out.println(getPemPublicKey(publicPath, "RSA").toString());
-//            System.out.println("----------");
-//            privatePath = "D:\\work\\资料\\密钥\\rsa_qed_sign_private.pem";
-            privatePath = "D:\\work\\资料\\密钥\\rsa_qed_sign_private_8.pem";
-            System.out.println(getPemPrivateKey(privatePath, "RSA").toString());
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
     }
 
 

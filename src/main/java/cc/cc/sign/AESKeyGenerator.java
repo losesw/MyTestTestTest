@@ -4,6 +4,7 @@
  */
 package cc.cc.sign;
 
+import cc.cc.util.UUIDUtil;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
@@ -99,6 +100,7 @@ public class AESKeyGenerator {
 
         String decryptData = aesKeyGenerator.decrypt(encryptData, key);
 
+        System.out.println(UUIDUtil.get32UUID());
 
     }
 }

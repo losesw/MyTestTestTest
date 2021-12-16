@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -107,4 +108,38 @@ public class FileTest {
         }
         return null;
     }
+
+    public static List<String> readContentToList(String filePath) {
+        List<String> list = new ArrayList<>();
+        File file = new File(filePath);
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
+            String line = null;
+            while ((line = bufferedReader.readLine()) != null) {
+                list.add(line);
+            }
+            return list;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+    public static void writeFile(List<String> list, String filePath) {
+        try {
+            File file = new File(filePath);
+            if (!file.exists()) file.createNewFile();
+            BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+            for(String str : list) {
+                writer.write(str);
+                writer.newLine();
+            }
+            writer.flush();
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }

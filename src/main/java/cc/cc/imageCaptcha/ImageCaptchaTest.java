@@ -31,9 +31,9 @@ public final class ImageCaptchaTest {
     // 干扰线数量
     private static final int LINES = 5;
     // 宽度
-    private static final int WIDTH = 80;
+    private static final int WIDTH = 80 * 2;
     // 高度
-    private static final int HEIGHT = 40;
+    private static final int HEIGHT = 40 * 2;
     // 字体大小
     private static final int FONT_SIZE = 30;
 
